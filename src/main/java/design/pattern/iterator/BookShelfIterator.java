@@ -4,7 +4,7 @@ package design.pattern.iterator;
  * @author chenxiang
  * @create 2019-11-15 0:02
  */
-public class BookShelfIterator implements Iterator{
+public class BookShelfIterator implements Iterator<Book>{
     private BookShelf bookShelf;
     private int index;
 
@@ -19,8 +19,8 @@ public class BookShelfIterator implements Iterator{
     }
 
     @Override
-    public Object next() {
-        Object r = bookShelf.getBookAt(index);
+    public Book next() {
+        Book r = bookShelf.getBookAt(index);
         index++;
         return r;
     }

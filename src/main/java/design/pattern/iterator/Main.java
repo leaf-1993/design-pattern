@@ -14,9 +14,9 @@ public class Main {
 //        while (shelf.iterator().hasNext()){
 //            System.out.println(shelf.iterator().next());
 //        }
-        Iterator iterator = shelf.iterator();
+        Iterator<Book> iterator = shelf.iterator();
         while(iterator.hasNext()){
-            System.out.println(((Book)iterator.next()).getName());
+            System.out.println(iterator.next().getName());
         }
     }
 }
