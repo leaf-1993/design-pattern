@@ -9,8 +9,16 @@ public class BookShelf implements Aggregate{
 
     private int last = 0;
 
+//    private BookShelfIterator iterator;
+
+    public BookShelf(int maxSize) {
+        this.books = new Book[maxSize];
+//        this.iterator = new BookShelfIterator(this);
+    }
+
     @Override
     public Iterator iterator() {
+//        return iterator;
         return new BookShelfIterator(this);
     }
 
